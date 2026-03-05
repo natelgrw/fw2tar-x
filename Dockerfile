@@ -18,13 +18,13 @@ ENV FW2TAR_LOG_STYLE=always
 # Debug: Show if GitHub token is available (using BuildKit secrets)
 RUN --mount=type=secret,id=github_token \
     if [ -s /run/secrets/github_token ]; then \
-        echo "GitHub token is available for authenticated downloads"; \
+    echo "GitHub token is available for authenticated downloads"; \
     else \
-        echo "No GitHub token provided - using unauthenticated downloads"; \
+    echo "No GitHub token provided - using unauthenticated downloads"; \
     fi
 
 RUN apt-get update && \
-  apt-get install -q -y \
+    apt-get install -q -y \
     android-sdk-libsparse-utils \
     arj \
     automake \
@@ -77,34 +77,34 @@ RUN apt-get update && \
 # Install dependencies
 RUN pip install --upgrade pip && \
     python3 -m pip install \
-      git+http://github.com/jrspruitt/ubi_reader.git@v0.8.5-master \
-      git+https://github.com/rehosting/binwalk.git \
-      git+https://github.com/ahupp/python-magic \
-      git+https://github.com/devttys0/yaffshiv.git \
-      git+https://github.com/marin-m/vmlinux-to-elf \
-      jefferson \
-      gnupg \
-      poetry \
-      psycopg2-binary \
-      pycryptodome \
-      pylzma \
-      pyyaml \
-      setuptools \
-      sqlalchemy \
-      telnetlib3 \
-      tk \
-      lz4 \
-      zstandard \
-      pyelftools \
-      lief && \
+    git+http://github.com/jrspruitt/ubi_reader.git@v0.8.5-master \
+    git+https://github.com/rehosting/binwalk.git \
+    git+https://github.com/ahupp/python-magic \
+    git+https://github.com/devttys0/yaffshiv.git \
+    git+https://github.com/marin-m/vmlinux-to-elf \
+    jefferson \
+    gnupg \
+    poetry \
+    psycopg2-binary \
+    pycryptodome \
+    pylzma \
+    pyyaml \
+    setuptools \
+    sqlalchemy \
+    telnetlib3 \
+    tk \
+    lz4 \
+    zstandard \
+    pyelftools \
+    lief && \
     python3 -m pip install python-lzo==1.14 && \
     poetry config virtualenvs.create false
 
 RUN --mount=type=secret,id=github_token \
     GITHUB_TOKEN="$(cat /run/secrets/github_token 2>/dev/null || echo '')" \
     /usr/local/bin/download_github_asset.sh \
-        "https://github.com/onekey-sec/sasquatch/releases/download/sasquatch-v4.5.1-4/sasquatch_1.0_$(dpkg --print-architecture).deb" \
-        sasquatch_1.0.deb && \
+    "https://github.com/onekey-sec/sasquatch/releases/download/sasquatch-v4.5.1-4/sasquatch_1.0_$(dpkg --print-architecture).deb" \
+    sasquatch_1.0.deb && \
     dpkg -i sasquatch_1.0.deb && \
     rm sasquatch_1.0.deb
 
@@ -115,11 +115,21 @@ RUN git clone --depth=1 https://github.com/ReFirmLabs/binwalk /binwalk && \
 
 # CramFS no longer in apt - needed by binwalk
 RUN git clone --depth=1 https://github.com/davidribyrne/cramfs.git /cramfs && \
-   cd /cramfs && make && make install
+    cd /cramfs && make && make install
 
 # Clone unblob fork then install with poetry
 RUN git clone --depth=1 https://github.com/rehosting/unblob.git /unblob
-RUN cd /unblob && poetry install --only main
+RUN cd /unblob && \
+    sed -i 's/lief = "^0.12.3"/lief = ">=0.12.3"/' pyproject.toml && \
+    sed -i -e 's/lief.logging.LOGGING_LEVEL.ERROR/lief.logging.LEVEL.ERROR/g' \
+    -e 's/lief.logging.LOGGING_LEVEL.WARNING/lief.logging.LEVEL.WARNING/g' \
+    -e 's/lief.logging.LOGGING_LEVEL.INFO/lief.logging.LEVEL.INFO/g' \
+    -e 's/lief.logging.LOGGING_LEVEL.DEBUG/lief.logging.LEVEL.DEBUG/g' \
+    unblob/handlers/executable/elf.py unblob/handlers/executable/pe.py unblob/handlers/executable/macho.py 2>/dev/null || true && \
+    poetry config virtualenvs.create false && \
+    rm poetry.lock && \
+    poetry lock && \
+    poetry install --only main
 
 # Install Rust with cache mount for better performance
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
@@ -161,8 +171,8 @@ RUN --mount=type=ssh git clone git@github.com:rehosting/fakeroot.git /fakeroot &
 RUN --mount=type=secret,id=github_token \
     GITHUB_TOKEN="$(cat /run/secrets/github_token 2>/dev/null || echo '')" \
     /usr/local/bin/download_github_asset.sh \
-        "https://raw.githubusercontent.com/qkaiser/arpy/23faf88a88488c41fc4348ea2b70996803f84f40/arpy.py" \
-        /usr/local/lib/python3.10/dist-packages/arpy.py
+    "https://raw.githubusercontent.com/qkaiser/arpy/23faf88a88488c41fc4348ea2b70996803f84f40/arpy.py" \
+    /usr/local/lib/python3.10/dist-packages/arpy.py
 
 # Copy wrapper script into container so we can copy out - note we don't put it on guest path
 COPY ./fw2tar /usr/local/src/fw2tar_wrapper

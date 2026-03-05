@@ -1,9 +1,8 @@
 *.sw*
 *.sif
-*.tar.gz
 *.new
 tests/tmp_downloads/
-
+PROGRESS.md
 
 # Added by cargo
 

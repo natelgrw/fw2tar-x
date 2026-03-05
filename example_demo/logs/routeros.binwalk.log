@@ -1,0 +1,64 @@
+
+Scan Time:     2026-03-05 12:53:16
+Target File:   /host_fw2tar-x/routeros.npk
+MD5 Checksum:  9ead21c8c36b252436a823b8b01a61f7
+Signatures:    411
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+4096          0x1000          Squashfs filesystem, little endian, version 4.0, compression:xz, size: 8072304 bytes, 755 inodes, blocksize: 262144 bytes, created: 2024-04-17 13:43:30
+8168003       0x7CA243        xz compressed data
+8168059       0x7CA27B        xz compressed data
+9659233       0x936361        xz compressed data
+
+
+Scan Time:     2026-03-05 12:53:17
+Target File:   /tmp/fw2tar_binwalkBU0gDb/_routeros.npk.extracted/7CA27B
+MD5 Checksum:  328e6a0a8bed27ce348b242fad4d1168
+Signatures:    411
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+Scan Time:     2026-03-05 12:53:17
+Target File:   /tmp/fw2tar_binwalkBU0gDb/_routeros.npk.extracted/936361
+MD5 Checksum:  376ba1528eeda6b668e9080bb88d5e98
+Signatures:    411
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             ASCII cpio archive (SVR4 with no CRC), file name: "dev", file name length: "0x00000004", file size: "0x00000000"
+116           0x74            ASCII cpio archive (SVR4 with no CRC), file name: "dev/ram0", file name length: "0x00000009", file size: "0x00000000"
+236           0xEC            ASCII cpio archive (SVR4 with no CRC), file name: "dev/console", file name length: "0x0000000C", file size: "0x00000000"
+360           0x168           ASCII cpio archive (SVR4 with no CRC), file name: "init", file name length: "0x00000005", file size: "0x00031970"
+
+
+Scan Time:     2026-03-05 13:08:19
+Target File:   /host_fw2tar-x/routeros.npk
+MD5 Checksum:  9ead21c8c36b252436a823b8b01a61f7
+Signatures:    411
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+4096          0x1000          Squashfs filesystem, little endian, version 4.0, compression:xz, size: 8072304 bytes, 755 inodes, blocksize: 262144 bytes, created: 2024-04-17 13:43:30
+8168003       0x7CA243        xz compressed data
+8168059       0x7CA27B        xz compressed data
+9659233       0x936361        xz compressed data
+
+
+Scan Time:     2026-03-05 13:08:20
+Target File:   /tmp/fw2tar_binwalkXxN8ni/_routeros.npk.extracted/7CA27B
+MD5 Checksum:  328e6a0a8bed27ce348b242fad4d1168
+Signatures:    411
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+Scan Time:     2026-03-05 13:08:20
+Target File:   /tmp/fw2tar_binwalkXxN8ni/_routeros.npk.extracted/936361
+MD5 Checksum:  376ba1528eeda6b668e9080bb88d5e98
+Signatures:    411
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             ASCII cpio archive (SVR4 with no CRC), file name: "dev", file name length: "0x00000004", file size: "0x00000000"
+116           0x74            ASCII cpio archive (SVR4 with no CRC), file name: "dev/ram0", file name length: "0x00000009", file size: "0x00000000"
+236           0xEC            ASCII cpio archive (SVR4 with no CRC), file name: "dev/console", file name length: "0x0000000C", file size: "0x00000000"
+360           0x168           ASCII cpio archive (SVR4 with no CRC), file name: "init", file name length: "0x00000005", file size: "0x00031970"
+

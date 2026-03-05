@@ -7,7 +7,7 @@ pub mod metadata;
 
 use analysis::{extract_and_process, ExtractionResult};
 pub use error::Fw2tarError;
-use metadata::Metadata;
+use metadata::{ArchiveMetadata, FirmwareMetadata, Metadata};
 
 use std::cmp::Reverse;
 use std::collections::HashSet;
@@ -131,7 +131,7 @@ pub fn main(args: args::Args) -> Result<(BestExtractor, PathBuf), Fw2tarError> {
     let mut best_results: Vec<_> = results.iter().filter(|&res| res.index == 0).collect();
 
     let result = if best_results.is_empty() {
-        return Ok((BestExtractor::None, selected_output_path));
+        Ok((BestExtractor::None, selected_output_path.clone()))
     } else if best_results.len() == 1 {
         Ok((BestExtractor::Only(best_results[0].extractor), selected_output_path.clone()))
     } else {
@@ -140,9 +140,47 @@ pub fn main(args: args::Args) -> Result<(BestExtractor, PathBuf), Fw2tarError> {
         Ok((BestExtractor::Best(best_results[0].extractor), selected_output_path.clone()))
     };
 
-    let best_result = best_results[0];
+    if !best_results.is_empty() {
+        let best_result = best_results[0];
+        fs::rename(&best_result.path, &selected_output_path).unwrap();
+    }
 
-    fs::rename(&best_result.path, &selected_output_path).unwrap();
+    let image_size = fs::metadata(&args.firmware).map(|m| m.len()).unwrap_or(0);
+
+    let archives: Vec<ArchiveMetadata> = results
+        .iter()
+        .map(|res| {
+            let final_path = if !best_results.is_empty() && res.path == best_results[0].path {
+                &selected_output_path
+            } else {
+                &res.path
+            };
+
+            ArchiveMetadata {
+                path: final_path.file_name().map(|n| n.to_string_lossy().into_owned()).unwrap_or_default(),
+                extractor: res.extractor.to_string(),
+                rootfs_score: res.rootfs_score,
+                was_merged: false,
+                file_node_count: res.file_node_count,
+                archive_hash: res.archive_hash.clone(),
+            }
+        })
+        .collect();
+
+    let fw_metadata = FirmwareMetadata {
+        input_hash: analysis::sha1_file(&args.firmware).unwrap_or_default(),
+        file: args.firmware.display().to_string(),
+        image_size,
+        fw2tar_command: env::args().collect(),
+        archives,
+    };
+
+    let fw_meta_path = {
+        let file_name = output.file_name().unwrap().to_string_lossy();
+        output.with_file_name(format!("{}.fw2tar-meta.json", file_name))
+    };
+
+    fs::write(fw_meta_path, serde_json::to_string_pretty(&fw_metadata).unwrap()).unwrap();
 
     result
 }

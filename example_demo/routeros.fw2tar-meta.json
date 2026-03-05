@@ -1,0 +1,88 @@
+{
+  "input_hash": "8cd5e10b1f0ee43b1c5d4d9d858190ca2eee6dba",
+  "file": "/host_fw2tar-x/routeros.npk",
+  "image_size": 9736766,
+  "fw2tar_command": [
+    "/root/.cargo/bin/fw2tar",
+    "/host_fw2tar-x/routeros.npk",
+    "--extractors",
+    "binwalk",
+    "--secondary-limit",
+    "8",
+    "--force"
+  ],
+  "archives": [
+    {
+      "path": "routeros.rootfs.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 13.303304908059076,
+      "was_merged": false,
+      "file_node_count": 755,
+      "archive_hash": "9f622f9abb6dc80cf5ef662184c5d7431d68dd37"
+    },
+    {
+      "path": "routeros.binwalk.secondary.0.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 10.68213122712422,
+      "was_merged": false,
+      "file_node_count": 128,
+      "archive_hash": "6dc84c556df4a8349eb711fbf9bd379697026b21"
+    },
+    {
+      "path": "routeros.binwalk.secondary.1.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 7.7917594692280545,
+      "was_merged": false,
+      "file_node_count": 14,
+      "archive_hash": "89a16f0c72c1c94bc7c170577cd66bc276c8fc74"
+    },
+    {
+      "path": "routeros.binwalk.secondary.2.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 7.7917594692280545,
+      "was_merged": false,
+      "file_node_count": 14,
+      "archive_hash": "291a22e0e939f4ff2b0ed032e52151119a61f989"
+    },
+    {
+      "path": "routeros.binwalk.secondary.3.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 7.6094379124341005,
+      "was_merged": false,
+      "file_node_count": 11,
+      "archive_hash": "4a14e66e1d675eb493a8045f9aa7e892b25759bb"
+    },
+    {
+      "path": "routeros.binwalk.secondary.4.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 7.386294361119891,
+      "was_merged": false,
+      "file_node_count": 9,
+      "archive_hash": "19ffd75f492a55ea48bf7c1a76e6b1a56c60f5b2"
+    },
+    {
+      "path": "routeros.binwalk.secondary.5.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 6.19722457733622,
+      "was_merged": false,
+      "file_node_count": 12,
+      "archive_hash": "ea9c1a1f2cbdb50039001a2df4af13d3825a3cea"
+    },
+    {
+      "path": "routeros.binwalk.secondary.6.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 5.386294361119891,
+      "was_merged": false,
+      "file_node_count": 9,
+      "archive_hash": "9e7f3a8b4b98bced4f168f9356c2edb61857bc8c"
+    },
+    {
+      "path": "routeros.binwalk.secondary.7.tar.gz",
+      "extractor": "binwalk",
+      "rootfs_score": 5.386294361119891,
+      "was_merged": false,
+      "file_node_count": 7,
+      "archive_hash": "2d9a992e9f2e8cba34cf251f3223bf834cb50795"
+    }
+  ]
+}

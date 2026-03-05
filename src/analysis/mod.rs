@@ -26,6 +26,7 @@ pub struct ExtractionResult {
     pub archive_hash: String,
     pub file_node_count: usize,
     pub path: PathBuf,
+    pub rootfs_score: f64,
 }
 
 #[derive(Error, Debug)]
@@ -47,7 +48,7 @@ pub fn extract_and_process(
     scratch_dir: Option<&Path>,
     verbose: bool,
     primary_limit: usize,
-    _secondary_limit: usize,
+    secondary_limit: usize,
     results: &Mutex<Vec<ExtractionResult>>,
     metadata: &Metadata,
     removed_devices: Option<&Mutex<HashSet<PathBuf>>>,
@@ -91,15 +92,8 @@ pub fn extract_and_process(
         return Err(ExtractProcessError::FailToFind);
     }
 
-    for (i, fs) in rootfs_choices.iter().enumerate() {
-        if i >= primary_limit {
-            println!(
-                "WARNING: skipping {n} filesystems, if files are missing you may need to set --primary-limit higher",
-                n=rootfs_choices.len() - primary_limit
-            );
-            break;
-        }
-
+    // --- Primary filesystems ---
+    for (i, fs) in rootfs_choices.iter().enumerate().take(primary_limit) {
         let tar_path = {
             // Simple string append to avoid with_extension() being greedy
             let file_name = out_file_base.file_name().unwrap().to_string_lossy();
@@ -119,7 +113,59 @@ pub fn extract_and_process(
             archive_hash,
             file_node_count,
             path: tar_path,
+            rootfs_score: fs.score,
         });
+    }
+
+    // --- Secondary filesystems ---
+    // Archive additional rootfs candidates beyond the primary limit, up to secondary_limit more.
+    // These are named .secondary.N.tar.gz and excluded from best-extractor selection in lib.rs.
+    for (secondary_index, fs) in rootfs_choices
+        .iter()
+        .enumerate()
+        .skip(primary_limit)
+        .take(secondary_limit)
+        .map(|(_, fs)| fs)
+        .enumerate()
+    {
+        let tar_path = {
+            let file_name = out_file_base.file_name().unwrap().to_string_lossy();
+            out_file_base.with_file_name(format!(
+                "{}.{extractor_name}.secondary.{secondary_index}.tar.gz",
+                file_name
+            ))
+        };
+
+        log::info!(
+            "{extractor_name}: archiving secondary filesystem {secondary_index} at {}",
+            fs.path.display()
+        );
+
+        let file_node_count = tar_fs(&fs.path, &tar_path, metadata, removed_devices).unwrap();
+        let archive_hash = sha1_file(&tar_path).unwrap();
+
+        results.lock().unwrap().push(ExtractionResult {
+            extractor: extractor_name,
+            index: primary_limit + secondary_index,
+            size: fs.size,
+            num_files: fs.num_files,
+            primary: false,
+            archive_hash,
+            file_node_count,
+            path: tar_path,
+            rootfs_score: fs.score,
+        });
+    }
+
+    // Warn if we found more filesystems than we were asked to archive.
+    let total_limit = primary_limit + secondary_limit;
+    if rootfs_choices.len() > total_limit {
+        let skipped = rootfs_choices.len() - total_limit;
+        println!(
+            "WARNING: {extractor_name} found {total} filesystem(s) but only archived {total_limit}. \
+             Skipping {skipped}. Increase --primary-limit or --secondary-limit to extract more.",
+            total = rootfs_choices.len()
+        );
     }
 
     drop(temp_dir);

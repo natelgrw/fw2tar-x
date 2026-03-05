@@ -90,9 +90,9 @@ fw2tar_run() {
             echo "Dockerfile not found in current directory and you requested a container rebuild"
             exit 1
         fi
-        # Check if current directory is named fw2tar
-        if [ ! "$(basename "$(pwd)")" == "fw2tar" ]; then
-            echo "Current directory is not named fw2tar but you requested a container rebuild"
+        # Check if current directory is named fw2tar-x
+        if [ ! "$(basename "$(pwd)")" == "fw2tar-x" ]; then
+            echo "Current directory is not named fw2tar-x but you requested a container rebuild"
             exit 1
         fi
 
@@ -124,13 +124,19 @@ fw2tar_run() {
 
     # Check for firmware file and map it
     for i in "${!cmd[@]}"; do
-	if [[ -f "${cmd[$i]}" ]] && [[ "${cmd[$((i - 1))]}" != "--output" ]] && [[ "${cmd[$((i - 1))]}" != "--scratch-dir" ]]; then
-	    local arg="${cmd[$i]}"
-	    local abspath=$(realpath "$arg")
-	    local host_path=$(dirname "$abspath")
-	    local guest_path="/host_$(basename "$host_path")"
-	    maps+=("$host_path:$guest_path")
-	    cmd[$i]="/host_$(basename "$host_path")/$(basename "$arg")"
+	if [[ -f "${cmd[$i]}" ]]; then
+	    prev_arg=""
+	    if [[ $i -gt 0 ]]; then
+	        prev_arg="${cmd[$((i - 1))]}"
+	    fi
+	    if [[ "$prev_arg" != "--output" ]] && [[ "$prev_arg" != "--scratch-dir" ]]; then
+	        local arg="${cmd[$i]}"
+	        local abspath=$(realpath "$arg")
+	        local host_path=$(dirname "$abspath")
+	        local guest_path="/host_$(basename "$host_path")"
+	        maps+=("$host_path:$guest_path")
+	        cmd[$i]="/host_$(basename "$host_path")/$(basename "$arg")"
+	    fi
 	fi
     done
 
@@ -190,7 +196,11 @@ fw2tar_run() {
     done
 
     # Add env variable of penguin bash script hash
-    hash=$(sha1sum "$0" | awk '{print $1}')
+    if command -v sha1sum >/dev/null 2>&1; then
+        hash=$(sha1sum "$0" | awk '{print $1}')
+    else
+        hash=$(shasum -a 1 "$0" | awk '{print $1}')
+    fi
     docker_cmd+=("-e" "FW2TAR_HASH=$hash")
 
     docker_cmd+=("$image")
