@@ -4,6 +4,7 @@ pub mod args;
 mod error;
 pub mod extractors;
 pub mod metadata;
+pub mod scanner;
 
 use analysis::{extract_and_process, ExtractionResult};
 pub use error::Fw2tarError;
@@ -58,6 +59,12 @@ pub fn main(args: args::Args) -> Result<(BestExtractor, PathBuf), Fw2tarError> {
         file: args.firmware.display().to_string(),
         fw2tar_command: env::args().collect(),
     };
+
+    let detected_regions = scanner::scan_firmware(&args.firmware).unwrap_or_else(|e| {
+        log::error!("Failed to run native byte scanner: {}", e);
+        Vec::new()
+    });
+    log::info!("Native byte scanner detected {} potential regions", detected_regions.len());
 
     extractors::set_timeout(args.timeout);
 
@@ -172,6 +179,7 @@ pub fn main(args: args::Args) -> Result<(BestExtractor, PathBuf), Fw2tarError> {
         file: args.firmware.display().to_string(),
         image_size,
         fw2tar_command: env::args().collect(),
+        detected_regions,
         archives,
     };
 

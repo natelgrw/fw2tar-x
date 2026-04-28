@@ -175,14 +175,18 @@ fw2tar_run() {
     done
 
     # Sort mappings by path length
-    IFS=$'\n' maps=($(sort -r <<<"${maps[*]}"))
-    unset IFS
+    if [ ${#maps[@]} -gt 0 ]; then
+        IFS=$'\n' maps=($(sort -r <<<"${maps[*]}"))
+        unset IFS
+    fi
 
     if $verbose; then
         echo "${BOLD}Mappings from host paths to guest paths: $RESET"
-        for map in "${maps[@]}"; do
-            echo "  $map"
-        done
+        if [ ${#maps[@]} -gt 0 ]; then
+            for map in "${maps[@]}"; do
+                echo "  $map"
+            done
+        fi
         echo
     fi
 
@@ -191,9 +195,11 @@ fw2tar_run() {
     docker_cmd+=("-u" "$(id -u):$(id -g)") # XXX will fakeroot be okay?
 
     # Add mappings to docker command
-    for map in "${maps[@]}"; do
-        docker_cmd+=("-v" "$map")
-    done
+    if [ ${#maps[@]} -gt 0 ]; then
+        for map in "${maps[@]}"; do
+            docker_cmd+=("-v" "$map")
+        done
+    fi
 
     # Add env variable of penguin bash script hash
     if command -v sha1sum >/dev/null 2>&1; then

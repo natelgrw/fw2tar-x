@@ -14,6 +14,7 @@ pub struct FirmwareMetadata {
     pub file: String,
     pub image_size: u64,
     pub fw2tar_command: Vec<String>,
+    pub detected_regions: Vec<crate::scanner::DetectedRegion>,
     pub archives: Vec<ArchiveMetadata>,
 }
 

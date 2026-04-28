@@ -1,88 +1,3014 @@
 {
   "input_hash": "8cd5e10b1f0ee43b1c5d4d9d858190ca2eee6dba",
-  "file": "/host_fw2tar-x/routeros.npk",
+  "file": "/host_example_demo/routeros.npk",
   "image_size": 9736766,
   "fw2tar_command": [
     "/root/.cargo/bin/fw2tar",
-    "/host_fw2tar-x/routeros.npk",
-    "--extractors",
-    "binwalk",
-    "--secondary-limit",
-    "8",
+    "/host_example_demo/routeros.npk",
     "--force"
+  ],
+  "detected_regions": [
+    {
+      "offset": 4096,
+      "signature_type": "squashfs"
+    },
+    {
+      "offset": 4192,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8648,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 38490,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 68980,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 71327,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 87088,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 91645,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 125180,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 125316,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 127307,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 144124,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 155697,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 158624,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 176444,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 180818,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 205897,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 231176,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 243867,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 257986,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 266706,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 274952,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 278980,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 279911,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 296931,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 303519,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 309246,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 311693,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 322680,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 332008,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 336898,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 339799,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 340636,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 353744,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 357123,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 366716,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 390614,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 393731,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 417436,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 419766,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 427987,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 439878,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 440988,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 457529,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 469334,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 476501,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 495305,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 505868,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 518231,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 520488,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 569400,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 581394,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 592823,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 603380,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 614100,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 619248,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 628127,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 652591,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 673891,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 675308,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 676576,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 681974,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 681975,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 717186,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 719742,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 739151,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 740966,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 760111,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 762424,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 779074,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 804415,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 832131,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 849996,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 863041,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 867401,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 925857,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 942296,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 965444,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 980862,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1016308,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1018953,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1039612,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1099420,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1098716,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1148012,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1149585,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1151192,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1164401,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1174830,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1185915,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1189169,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1189593,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1206675,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1225140,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1250789,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1252640,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1299804,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1305473,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1313265,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1339038,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1340453,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1343864,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1352781,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1356010,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1364378,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1385652,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1398129,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1404713,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1411685,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1422876,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1434190,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1458088,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1463508,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1473562,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1494556,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1505490,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1521759,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1523655,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1547016,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1554175,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1556864,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1572998,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1575924,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1581839,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1590298,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1590088,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1610579,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1610484,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1620943,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1623312,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1623902,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1635222,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1636492,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1676739,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1699738,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1715615,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1717118,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1718372,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1730327,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1746638,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1758641,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1767916,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1771554,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1772844,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1777800,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1789425,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1802827,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1820636,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1821684,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1832184,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1832445,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1839611,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1844727,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1870584,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 1882063,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1885077,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1889784,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1896943,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 1904703,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 1920048,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 1927787,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2001852,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2028034,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2055952,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2056836,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2066221,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2068584,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2071753,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2076972,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2079728,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2106048,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2128690,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2136880,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2143682,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2157703,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2160373,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2167908,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2194132,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2196296,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2199727,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2205020,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2233452,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2237208,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2254617,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2256360,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2257191,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2260560,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2266538,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2282558,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2292841,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2299290,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2308045,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2308489,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2312411,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2341173,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2348136,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2361831,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2364268,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2373479,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2379025,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2388091,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2393246,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2395474,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2412332,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2454833,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2458228,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2468852,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2470221,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2470373,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2507810,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2513196,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2542238,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2556968,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2569724,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2580884,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2592705,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2606248,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2614965,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2635236,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2641499,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2646039,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2664299,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2677540,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2686979,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2691955,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2691090,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2697912,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2698769,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2703281,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2704713,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2711269,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2726989,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2739138,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2760932,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2774930,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2777036,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2794077,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2803425,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2807992,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2830076,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2834435,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2896999,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2909646,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2911426,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 2921798,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2924608,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2927492,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2931400,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 2936920,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2976228,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 2980324,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 2995192,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3006236,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3028631,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3041004,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3047548,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3081924,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3111527,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3122740,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3141040,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3143979,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3186780,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3194772,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3200510,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3209046,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3230429,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3238672,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3243528,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3269080,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3286166,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3293179,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3294635,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3302093,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3303140,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3310688,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3320430,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3337517,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3339108,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3349797,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3358330,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3405473,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3414860,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3415810,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3422012,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3443425,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3452806,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3471632,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3472752,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3493382,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3494767,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3494928,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3511138,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3513643,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3518609,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3597108,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3636629,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3649865,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3656580,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3668281,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3678758,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3690927,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3700392,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3751695,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3753408,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3785974,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3803177,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3807768,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3806922,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3817757,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3826224,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3846609,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3873249,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3883708,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3904817,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3907749,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3919392,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3927136,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3943173,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3953428,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 3955804,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 3958341,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3966894,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3979600,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3982028,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 3989550,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 3999048,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4007275,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4014638,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4025520,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4029897,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4031729,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4059916,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4074572,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4104571,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4112051,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4119758,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4121043,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4122073,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4123635,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4131809,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4134183,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4136057,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4136968,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4144922,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4164104,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4171721,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4172984,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4185245,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4214804,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4216408,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4219445,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4225711,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4234043,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4239165,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4250288,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4273544,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4289980,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4318109,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4322935,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4326516,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4356192,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4370417,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4391338,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4393920,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4404533,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4408112,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4409546,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4421248,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4432235,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4461123,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4476446,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4483320,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4489236,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4496874,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4513232,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4517853,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4543463,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4552116,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4571436,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4583811,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4584427,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4594709,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4606336,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4608189,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4610566,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4632837,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4648483,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4652800,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4676745,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4681736,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4682661,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4687564,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4690404,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4692663,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4693564,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4697788,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4716372,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4726035,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4737289,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4741661,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4748152,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4749149,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4762824,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4801662,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4808659,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4816005,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4818717,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4829018,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4833069,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4836929,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4840045,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4842285,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4848544,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4863398,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4924924,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 4935587,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 4937964,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 4974918,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 4979954,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5004284,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5010779,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5020542,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5038656,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5078092,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5108795,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5135027,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5145591,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5147080,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5151872,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5155064,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5160338,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5161578,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5167848,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5213833,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5215000,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5236757,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5255132,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5255810,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5258279,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5294947,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5295922,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5296608,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5322341,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5331348,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5332718,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5345499,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5361768,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5388267,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5397444,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5398087,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5405636,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5414254,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5469124,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5484080,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5487387,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5531088,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5532155,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5537208,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5546313,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5585594,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5623172,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5631582,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5631595,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5646399,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5659927,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5661885,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5675561,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5691056,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5700114,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5718431,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5724580,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5739156,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5789783,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5805448,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5810630,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5818484,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5848901,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5859305,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5860115,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5868019,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5871548,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5891285,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5898614,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5909846,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5960916,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 5964463,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5984007,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5992703,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 5995239,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 5995755,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 5998013,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6019184,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6021836,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6051350,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6059909,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6083530,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6084814,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6090412,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6103064,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6116786,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6133572,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6143545,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6151044,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6187857,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6200452,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6231366,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6237270,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6269509,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6280276,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6288998,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6293926,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6303184,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6307517,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6348036,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6383408,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6382438,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6396053,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6415692,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6434088,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6455288,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6457825,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6472187,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6478856,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6552184,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6555612,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6596079,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6617529,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6633040,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6640578,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6655408,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6673734,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6675371,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6713528,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6729768,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6751218,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6753733,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6760858,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6777288,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6799413,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6811603,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6844858,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6849770,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6851548,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6864276,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6883840,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6898459,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6908875,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6915062,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 6943265,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6946424,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6957204,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6958617,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6962950,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 6975220,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 6975251,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 6992186,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7012775,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7012497,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7015844,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7027580,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7035148,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7063657,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7064023,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7066305,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7068922,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7094861,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7109663,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7123336,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7154295,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7171327,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7178470,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7182788,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7189511,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7195105,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7220067,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7222961,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7228932,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7234474,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7237106,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7240143,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7240914,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7251914,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7258877,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7263026,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7265796,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7280821,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7301492,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7320268,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7336697,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7346584,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7345584,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7355384,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7368812,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7384192,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7390015,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7412020,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7417719,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7427522,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7464564,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7475228,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7492494,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7502148,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7539214,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7546604,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7555840,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7557410,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7558227,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7558467,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7596234,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7602682,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7614656,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7625471,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7634332,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7637799,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7655024,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7675141,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7695665,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7699600,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7702202,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7703560,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7712969,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7734980,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7740522,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7743380,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7743956,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7748633,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7769507,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7777340,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7799921,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7802791,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7812586,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7814275,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7815977,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7824108,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7843715,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7845684,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7880775,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7880984,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7894475,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7901043,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 7905314,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7905571,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7921131,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7922092,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 7936691,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 7962193,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 7994000,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8001240,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8006477,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8006785,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8015931,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8031570,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 8060746,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8061055,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8062856,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8064958,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8067032,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8070698,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8074548,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8075058,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8168003,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8168059,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 8212008,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8216521,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8221509,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8232734,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 8249433,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8258635,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8267943,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8268485,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8278595,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 8283603,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 8285358,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8294630,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8332119,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8340073,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8377332,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8394688,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8474096,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8570685,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8596248,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8605955,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8610013,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8644189,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8650261,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8665750,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8670782,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8671347,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8695519,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8705035,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8707724,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 8717806,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8751873,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8778476,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8795507,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8808791,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 8821435,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8831287,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8843103,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8857198,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8861990,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8869613,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8880199,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8884864,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8892817,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 8919010,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 8922176,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 8925632,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9017646,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9018886,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9031322,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9032338,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9070479,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9077818,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9083694,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9087277,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9091698,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9104727,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9107379,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9133081,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9139681,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9158735,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9177238,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9269358,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9308330,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9310221,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9377357,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9412382,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9437242,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9461787,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9534702,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9550205,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9574348,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9583919,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9593357,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9599845,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9603541,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9606919,
+      "signature_type": "gzip"
+    },
+    {
+      "offset": 9606238,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9615316,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9621370,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9628730,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9659233,
+      "signature_type": "xz"
+    },
+    {
+      "offset": 9664347,
+      "signature_type": "ext"
+    },
+    {
+      "offset": 9678416,
+      "signature_type": "jffs2"
+    },
+    {
+      "offset": 9728488,
+      "signature_type": "gzip"
+    }
   ],
   "archives": [
     {
       "path": "routeros.rootfs.tar.gz",
+      "extractor": "binwalkv3",
+      "rootfs_score": 13.303304908059076,
+      "was_merged": false,
+      "file_node_count": 853,
+      "archive_hash": "1482eb032c181721af76bd5cc007c67f4de5914a"
+    },
+    {
+      "path": "routeros.binwalk.0.tar.gz",
       "extractor": "binwalk",
       "rootfs_score": 13.303304908059076,
       "was_merged": false,
       "file_node_count": 755,
-      "archive_hash": "9f622f9abb6dc80cf5ef662184c5d7431d68dd37"
-    },
-    {
-      "path": "routeros.binwalk.secondary.0.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 10.68213122712422,
-      "was_merged": false,
-      "file_node_count": 128,
-      "archive_hash": "6dc84c556df4a8349eb711fbf9bd379697026b21"
-    },
-    {
-      "path": "routeros.binwalk.secondary.1.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 7.7917594692280545,
-      "was_merged": false,
-      "file_node_count": 14,
-      "archive_hash": "89a16f0c72c1c94bc7c170577cd66bc276c8fc74"
-    },
-    {
-      "path": "routeros.binwalk.secondary.2.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 7.7917594692280545,
-      "was_merged": false,
-      "file_node_count": 14,
-      "archive_hash": "291a22e0e939f4ff2b0ed032e52151119a61f989"
-    },
-    {
-      "path": "routeros.binwalk.secondary.3.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 7.6094379124341005,
-      "was_merged": false,
-      "file_node_count": 11,
-      "archive_hash": "4a14e66e1d675eb493a8045f9aa7e892b25759bb"
-    },
-    {
-      "path": "routeros.binwalk.secondary.4.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 7.386294361119891,
-      "was_merged": false,
-      "file_node_count": 9,
-      "archive_hash": "19ffd75f492a55ea48bf7c1a76e6b1a56c60f5b2"
-    },
-    {
-      "path": "routeros.binwalk.secondary.5.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 6.19722457733622,
-      "was_merged": false,
-      "file_node_count": 12,
-      "archive_hash": "ea9c1a1f2cbdb50039001a2df4af13d3825a3cea"
-    },
-    {
-      "path": "routeros.binwalk.secondary.6.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 5.386294361119891,
-      "was_merged": false,
-      "file_node_count": 9,
-      "archive_hash": "9e7f3a8b4b98bced4f168f9356c2edb61857bc8c"
-    },
-    {
-      "path": "routeros.binwalk.secondary.7.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 5.386294361119891,
-      "was_merged": false,
-      "file_node_count": 7,
-      "archive_hash": "2d9a992e9f2e8cba34cf251f3223bf834cb50795"
+      "archive_hash": "4f6eb5dc7c01c53773906cc63d736237e2272f9a"
     }
   ]
 }
