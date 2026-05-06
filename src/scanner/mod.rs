@@ -1,4 +1,5 @@
 pub mod signatures;
+pub mod validation;
 
 use memmap2::MmapOptions;
 use serde::{Deserialize, Serialize};
@@ -17,23 +18,47 @@ pub fn scan_firmware(file_path: &Path) -> io::Result<Vec<DetectedRegion>> {
     let mmap = unsafe { MmapOptions::new().map(&file)? };
     let mut regions = Vec::new();
 
-    // Very naive multi-pattern string search for Phase 4.
-    // Iterating byte by byte for simplicity; Phase 6 will replace this with Aho-Corasick.
-    for i in 0..mmap.len() {
-        for sig in signatures::SIGNATURES {
-            if i + sig.magic.len() <= mmap.len() && &mmap[i..i + sig.magic.len()] == sig.magic {
+    let mut patterns = Vec::new();
+    for sig in signatures::SIGNATURES {
+        patterns.push(sig.magic);
+    }
+    for (_, _, magic) in signatures::SPECIAL_SIGNATURES {
+        patterns.push(*magic);
+    }
+
+    let ac = aho_corasick::AhoCorasick::new(&patterns).unwrap();
+
+    for mat in ac.find_overlapping_iter(&*mmap) {
+        let pattern_idx = mat.pattern().as_usize();
+        let i = mat.start();
+
+        if pattern_idx < signatures::SIGNATURES.len() {
+            let sig = &signatures::SIGNATURES[pattern_idx];
+            let is_valid = match sig.name {
+                "squashfs" => validation::validate_squashfs(&mmap, i),
+                "jffs2" => validation::validate_jffs2(&mmap, i),
+                _ => true,
+            };
+            
+            if is_valid {
                 regions.push(DetectedRegion {
                     offset: i as u64,
                     signature_type: sig.name.to_string(),
                 });
             }
-        }
-
-        for (name, offset, magic) in signatures::SPECIAL_SIGNATURES {
-            if i + magic.len() <= mmap.len() && &mmap[i..i + magic.len()] == *magic {
-                if i >= *offset {
+        } else {
+            let special_idx = pattern_idx - signatures::SIGNATURES.len();
+            let (name, offset, _) = &signatures::SPECIAL_SIGNATURES[special_idx];
+            if i >= *offset {
+                let start_offset = i - *offset;
+                let is_valid = match *name {
+                    "ext" => validation::validate_ext(&mmap, start_offset),
+                    _ => true,
+                };
+                
+                if is_valid {
                     regions.push(DetectedRegion {
-                        offset: (i - *offset) as u64,
+                        offset: start_offset as u64,
                         signature_type: name.to_string(),
                     });
                 }

@@ -5,7 +5,9 @@
   "fw2tar_command": [
     "/root/.cargo/bin/fw2tar",
     "/host_example_demo/routeros.npk",
-    "--force"
+    "--force",
+    "--extractors",
+    "binwalkv3"
   ],
   "detected_regions": [
     {
@@ -21,24 +23,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 38490,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 68980,
       "signature_type": "xz"
     },
     {
       "offset": 71327,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 87088,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 91645,
-      "signature_type": "jffs2"
     },
     {
       "offset": 125180,
@@ -53,36 +43,16 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 144124,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 155697,
       "signature_type": "ext"
-    },
-    {
-      "offset": 158624,
-      "signature_type": "jffs2"
     },
     {
       "offset": 176444,
       "signature_type": "xz"
     },
     {
-      "offset": 180818,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 205897,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 231176,
       "signature_type": "xz"
-    },
-    {
-      "offset": 243867,
-      "signature_type": "jffs2"
     },
     {
       "offset": 257986,
@@ -105,14 +75,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 296931,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 303519,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 309246,
       "signature_type": "ext"
     },
@@ -133,16 +95,8 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 339799,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 340636,
       "signature_type": "ext"
-    },
-    {
-      "offset": 353744,
-      "signature_type": "jffs2"
     },
     {
       "offset": 357123,
@@ -153,20 +107,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 390614,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 393731,
       "signature_type": "ext"
     },
     {
       "offset": 417436,
       "signature_type": "xz"
-    },
-    {
-      "offset": 419766,
-      "signature_type": "jffs2"
     },
     {
       "offset": 427987,
@@ -189,14 +135,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 476501,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 495305,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 505868,
       "signature_type": "xz"
     },
@@ -209,16 +147,8 @@
       "signature_type": "xz"
     },
     {
-      "offset": 569400,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 581394,
       "signature_type": "ext"
-    },
-    {
-      "offset": 592823,
-      "signature_type": "jffs2"
     },
     {
       "offset": 603380,
@@ -233,14 +163,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 628127,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 652591,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 673891,
       "signature_type": "ext"
     },
@@ -249,36 +171,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 676576,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 681974,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 681975,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 717186,
       "signature_type": "ext"
     },
     {
-      "offset": 719742,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 739151,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 740966,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 760111,
-      "signature_type": "jffs2"
     },
     {
       "offset": 762424,
@@ -287,14 +185,6 @@
     {
       "offset": 779074,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 804415,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 832131,
-      "signature_type": "jffs2"
     },
     {
       "offset": 849996,
@@ -309,20 +199,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 925857,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 942296,
       "signature_type": "xz"
     },
     {
       "offset": 965444,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 980862,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1016308,
@@ -357,26 +239,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 1164401,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1174830,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1185915,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1189169,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1189593,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1206675,
       "signature_type": "ext"
     },
@@ -389,10 +251,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 1252640,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1299804,
       "signature_type": "xz"
     },
@@ -401,24 +259,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 1313265,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1339038,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1340453,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1343864,
       "signature_type": "xz"
-    },
-    {
-      "offset": 1352781,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1356010,
@@ -437,20 +279,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 1404713,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1411685,
       "signature_type": "gzip"
     },
     {
       "offset": 1422876,
       "signature_type": "xz"
-    },
-    {
-      "offset": 1434190,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1458088,
@@ -469,10 +303,6 @@
       "signature_type": "xz"
     },
     {
-      "offset": 1505490,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1521759,
       "signature_type": "gzip"
     },
@@ -485,36 +315,16 @@
       "signature_type": "ext"
     },
     {
-      "offset": 1554175,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1556864,
       "signature_type": "xz"
-    },
-    {
-      "offset": 1572998,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1575924,
       "signature_type": "gzip"
     },
     {
-      "offset": 1581839,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1590298,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1590088,
       "signature_type": "ext"
-    },
-    {
-      "offset": 1610579,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1610484,
@@ -523,10 +333,6 @@
     {
       "offset": 1620943,
       "signature_type": "ext"
-    },
-    {
-      "offset": 1623312,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1623902,
@@ -545,18 +351,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 1699738,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1715615,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1717118,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1718372,
       "signature_type": "xz"
     },
@@ -569,20 +363,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 1758641,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1767916,
       "signature_type": "xz"
-    },
-    {
-      "offset": 1771554,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 1772844,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1777800,
@@ -613,10 +395,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 1839611,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 1844727,
       "signature_type": "gzip"
     },
@@ -635,10 +413,6 @@
     {
       "offset": 1889784,
       "signature_type": "xz"
-    },
-    {
-      "offset": 1896943,
-      "signature_type": "jffs2"
     },
     {
       "offset": 1904703,
@@ -661,10 +435,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 2055952,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2056836,
       "signature_type": "gzip"
     },
@@ -677,14 +447,6 @@
       "signature_type": "xz"
     },
     {
-      "offset": 2071753,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2076972,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2079728,
       "signature_type": "gzip"
     },
@@ -693,40 +455,16 @@
       "signature_type": "ext"
     },
     {
-      "offset": 2128690,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2136880,
       "signature_type": "xz"
-    },
-    {
-      "offset": 2143682,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2157703,
       "signature_type": "gzip"
     },
     {
-      "offset": 2160373,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2167908,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 2194132,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2196296,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2199727,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2205020,
@@ -737,16 +475,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 2237208,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2254617,
       "signature_type": "ext"
-    },
-    {
-      "offset": 2256360,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2257191,
@@ -765,28 +495,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 2292841,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2299290,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2308045,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 2308489,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2312411,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2341173,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2348136,
@@ -801,24 +511,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 2373479,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2379025,
       "signature_type": "gzip"
     },
     {
       "offset": 2388091,
       "signature_type": "ext"
-    },
-    {
-      "offset": 2393246,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2395474,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2412332,
@@ -837,18 +535,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 2470221,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2470373,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2507810,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2513196,
       "signature_type": "xz"
     },
@@ -865,32 +551,8 @@
       "signature_type": "xz"
     },
     {
-      "offset": 2580884,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2592705,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2606248,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2614965,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2635236,
       "signature_type": "xz"
-    },
-    {
-      "offset": 2641499,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2646039,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2664299,
@@ -901,20 +563,8 @@
       "signature_type": "xz"
     },
     {
-      "offset": 2686979,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2691955,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2691090,
       "signature_type": "ext"
-    },
-    {
-      "offset": 2697912,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2698769,
@@ -929,36 +579,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 2711269,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2726989,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2739138,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2760932,
       "signature_type": "xz"
-    },
-    {
-      "offset": 2774930,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2777036,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2794077,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2803425,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2807992,
@@ -969,20 +591,8 @@
       "signature_type": "xz"
     },
     {
-      "offset": 2834435,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 2896999,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 2909646,
       "signature_type": "ext"
-    },
-    {
-      "offset": 2911426,
-      "signature_type": "jffs2"
     },
     {
       "offset": 2921798,
@@ -1013,32 +623,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 2995192,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3006236,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3028631,
       "signature_type": "ext"
     },
     {
-      "offset": 3041004,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3047548,
       "signature_type": "xz"
-    },
-    {
-      "offset": 3081924,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3111527,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3122740,
@@ -1047,14 +637,6 @@
     {
       "offset": 3141040,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 3143979,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3186780,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3194772,
@@ -1069,16 +651,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 3230429,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3238672,
       "signature_type": "ext"
-    },
-    {
-      "offset": 3243528,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3269080,
@@ -1089,16 +663,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 3293179,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3294635,
       "signature_type": "ext"
-    },
-    {
-      "offset": 3302093,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3303140,
@@ -1109,32 +675,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 3320430,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3337517,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3339108,
       "signature_type": "xz"
     },
     {
-      "offset": 3349797,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3358330,
       "signature_type": "ext"
-    },
-    {
-      "offset": 3405473,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3414860,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3415810,
@@ -1153,10 +699,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 3471632,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3472752,
       "signature_type": "gzip"
     },
@@ -1165,60 +707,24 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 3494767,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3494928,
       "signature_type": "xz"
-    },
-    {
-      "offset": 3511138,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3513643,
       "signature_type": "gzip"
     },
     {
-      "offset": 3518609,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3597108,
       "signature_type": "xz"
-    },
-    {
-      "offset": 3636629,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3649865,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3656580,
       "signature_type": "xz"
     },
     {
-      "offset": 3668281,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3678758,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3690927,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3700392,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 3751695,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3753408,
@@ -1229,24 +735,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 3803177,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3807768,
       "signature_type": "xz"
     },
     {
       "offset": 3806922,
       "signature_type": "ext"
-    },
-    {
-      "offset": 3817757,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3826224,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3846609,
@@ -1269,16 +763,8 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 3919392,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 3927136,
       "signature_type": "ext"
-    },
-    {
-      "offset": 3943173,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3953428,
@@ -1287,22 +773,6 @@
     {
       "offset": 3955804,
       "signature_type": "xz"
-    },
-    {
-      "offset": 3958341,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3966894,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3979600,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 3982028,
-      "signature_type": "jffs2"
     },
     {
       "offset": 3989550,
@@ -1317,14 +787,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 4014638,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4025520,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4029897,
       "signature_type": "gzip"
     },
@@ -1337,24 +799,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 4074572,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4104571,
       "signature_type": "gzip"
     },
     {
       "offset": 4112051,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 4119758,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4121043,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4122073,
@@ -1365,40 +815,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 4131809,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4134183,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4136057,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4136968,
       "signature_type": "xz"
     },
     {
-      "offset": 4144922,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4164104,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4171721,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4172984,
       "signature_type": "ext"
-    },
-    {
-      "offset": 4185245,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4214804,
@@ -1411,10 +833,6 @@
     {
       "offset": 4219445,
       "signature_type": "ext"
-    },
-    {
-      "offset": 4225711,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4234043,
@@ -1433,16 +851,8 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 4289980,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4318109,
       "signature_type": "ext"
-    },
-    {
-      "offset": 4322935,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4326516,
@@ -1453,20 +863,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 4370417,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4391338,
       "signature_type": "ext"
-    },
-    {
-      "offset": 4393920,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4404533,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4408112,
@@ -1477,20 +875,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 4421248,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4432235,
       "signature_type": "gzip"
     },
     {
       "offset": 4461123,
       "signature_type": "ext"
-    },
-    {
-      "offset": 4476446,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4483320,
@@ -1501,64 +891,20 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 4496874,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4513232,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 4517853,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4543463,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4552116,
       "signature_type": "xz"
     },
     {
-      "offset": 4571436,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4583811,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4584427,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4594709,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4606336,
       "signature_type": "xz"
     },
     {
-      "offset": 4608189,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4610566,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4632837,
       "signature_type": "ext"
-    },
-    {
-      "offset": 4648483,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4652800,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4676745,
@@ -1569,20 +915,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 4682661,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4687564,
       "signature_type": "xz"
     },
     {
       "offset": 4690404,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 4692663,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4693564,
@@ -1597,16 +935,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 4726035,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4737289,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 4741661,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4748152,
@@ -1621,24 +951,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 4801662,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4808659,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4816005,
       "signature_type": "ext"
     },
     {
       "offset": 4818717,
       "signature_type": "ext"
-    },
-    {
-      "offset": 4829018,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4833069,
@@ -1653,16 +971,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 4842285,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 4848544,
       "signature_type": "xz"
-    },
-    {
-      "offset": 4863398,
-      "signature_type": "jffs2"
     },
     {
       "offset": 4924924,
@@ -1677,28 +987,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 4974918,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 4979954,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5004284,
       "signature_type": "xz"
     },
     {
       "offset": 5010779,
       "signature_type": "ext"
-    },
-    {
-      "offset": 5020542,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5038656,
-      "signature_type": "jffs2"
     },
     {
       "offset": 5078092,
@@ -1729,14 +1023,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 5160338,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5161578,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5167848,
       "signature_type": "gzip"
     },
@@ -1753,40 +1039,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 5255132,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5255810,
       "signature_type": "gzip"
     },
     {
-      "offset": 5258279,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5294947,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5295922,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5296608,
       "signature_type": "xz"
-    },
-    {
-      "offset": 5322341,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5331348,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5332718,
-      "signature_type": "jffs2"
     },
     {
       "offset": 5345499,
@@ -1805,10 +1063,6 @@
       "signature_type": "xz"
     },
     {
-      "offset": 5398087,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5405636,
       "signature_type": "xz"
     },
@@ -1825,10 +1079,6 @@
       "signature_type": "xz"
     },
     {
-      "offset": 5487387,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5531088,
       "signature_type": "ext"
     },
@@ -1841,36 +1091,16 @@
       "signature_type": "xz"
     },
     {
-      "offset": 5546313,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5585594,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5623172,
       "signature_type": "xz"
-    },
-    {
-      "offset": 5631582,
-      "signature_type": "jffs2"
     },
     {
       "offset": 5631595,
       "signature_type": "gzip"
     },
     {
-      "offset": 5646399,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5659927,
       "signature_type": "ext"
-    },
-    {
-      "offset": 5661885,
-      "signature_type": "jffs2"
     },
     {
       "offset": 5675561,
@@ -1879,10 +1109,6 @@
     {
       "offset": 5691056,
       "signature_type": "xz"
-    },
-    {
-      "offset": 5700114,
-      "signature_type": "jffs2"
     },
     {
       "offset": 5718431,
@@ -1909,22 +1135,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 5818484,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5848901,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5859305,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5860115,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5868019,
       "signature_type": "gzip"
     },
@@ -1933,28 +1143,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 5891285,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5898614,
       "signature_type": "gzip"
     },
     {
-      "offset": 5909846,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 5960916,
       "signature_type": "xz"
-    },
-    {
-      "offset": 5964463,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 5984007,
-      "signature_type": "jffs2"
     },
     {
       "offset": 5992703,
@@ -1963,10 +1157,6 @@
     {
       "offset": 5995239,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 5995755,
-      "signature_type": "jffs2"
     },
     {
       "offset": 5998013,
@@ -1981,28 +1171,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 6051350,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6059909,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6083530,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6084814,
       "signature_type": "gzip"
     },
     {
       "offset": 6090412,
       "signature_type": "xz"
-    },
-    {
-      "offset": 6103064,
-      "signature_type": "jffs2"
     },
     {
       "offset": 6116786,
@@ -2017,14 +1191,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 6151044,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6187857,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6200452,
       "signature_type": "xz"
     },
@@ -2037,20 +1203,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 6269509,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6280276,
       "signature_type": "xz"
-    },
-    {
-      "offset": 6288998,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6293926,
-      "signature_type": "jffs2"
     },
     {
       "offset": 6303184,
@@ -2063,10 +1217,6 @@
     {
       "offset": 6348036,
       "signature_type": "xz"
-    },
-    {
-      "offset": 6383408,
-      "signature_type": "jffs2"
     },
     {
       "offset": 6382438,
@@ -2093,10 +1243,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 6472187,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6478856,
       "signature_type": "xz"
     },
@@ -2105,32 +1251,12 @@
       "signature_type": "xz"
     },
     {
-      "offset": 6555612,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6596079,
       "signature_type": "gzip"
     },
     {
-      "offset": 6617529,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6633040,
       "signature_type": "xz"
-    },
-    {
-      "offset": 6640578,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6655408,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6673734,
-      "signature_type": "jffs2"
     },
     {
       "offset": 6675371,
@@ -2173,10 +1299,6 @@
       "signature_type": "ext"
     },
     {
-      "offset": 6849770,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6851548,
       "signature_type": "gzip"
     },
@@ -2189,20 +1311,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 6898459,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6908875,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 6915062,
       "signature_type": "ext"
-    },
-    {
-      "offset": 6943265,
-      "signature_type": "jffs2"
     },
     {
       "offset": 6946424,
@@ -2211,14 +1321,6 @@
     {
       "offset": 6957204,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 6958617,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 6962950,
-      "signature_type": "jffs2"
     },
     {
       "offset": 6975220,
@@ -2233,24 +1335,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 7012775,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7012497,
       "signature_type": "ext"
     },
     {
       "offset": 7015844,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 7027580,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7035148,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7063657,
@@ -2273,16 +1363,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 7109663,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7123336,
       "signature_type": "ext"
-    },
-    {
-      "offset": 7154295,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7171327,
@@ -2295,14 +1377,6 @@
     {
       "offset": 7182788,
       "signature_type": "xz"
-    },
-    {
-      "offset": 7189511,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7195105,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7220067,
@@ -2321,24 +1395,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 7237106,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7240143,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7240914,
       "signature_type": "gzip"
     },
     {
       "offset": 7251914,
       "signature_type": "ext"
-    },
-    {
-      "offset": 7258877,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7263026,
@@ -2351,14 +1413,6 @@
     {
       "offset": 7280821,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 7301492,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7320268,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7336697,
@@ -2401,16 +1455,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 7464564,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7475228,
       "signature_type": "xz"
-    },
-    {
-      "offset": 7492494,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7502148,
@@ -2419,10 +1465,6 @@
     {
       "offset": 7539214,
       "signature_type": "ext"
-    },
-    {
-      "offset": 7546604,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7555840,
@@ -2465,10 +1507,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 7655024,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7675141,
       "signature_type": "gzip"
     },
@@ -2485,32 +1523,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 7703560,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7712969,
       "signature_type": "gzip"
     },
     {
       "offset": 7734980,
       "signature_type": "ext"
-    },
-    {
-      "offset": 7740522,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7743380,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7743956,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7748633,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7769507,
@@ -2525,28 +1543,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 7802791,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7812586,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7814275,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 7815977,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7824108,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 7843715,
-      "signature_type": "jffs2"
     },
     {
       "offset": 7845684,
@@ -2577,24 +1575,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 7921131,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7922092,
       "signature_type": "xz"
     },
     {
-      "offset": 7936691,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 7962193,
       "signature_type": "ext"
-    },
-    {
-      "offset": 7994000,
-      "signature_type": "jffs2"
     },
     {
       "offset": 8001240,
@@ -2603,14 +1589,6 @@
     {
       "offset": 8006477,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 8006785,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8015931,
-      "signature_type": "jffs2"
     },
     {
       "offset": 8031570,
@@ -2661,10 +1639,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 8216521,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 8221509,
       "signature_type": "gzip"
     },
@@ -2673,20 +1647,8 @@
       "signature_type": "ext"
     },
     {
-      "offset": 8249433,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8258635,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 8267943,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 8268485,
-      "signature_type": "jffs2"
     },
     {
       "offset": 8278595,
@@ -2695,10 +1657,6 @@
     {
       "offset": 8283603,
       "signature_type": "ext"
-    },
-    {
-      "offset": 8285358,
-      "signature_type": "jffs2"
     },
     {
       "offset": 8294630,
@@ -2721,14 +1679,6 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 8474096,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8570685,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 8596248,
       "signature_type": "gzip"
     },
@@ -2737,36 +1687,8 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 8610013,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8644189,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8650261,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 8665750,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 8670782,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8671347,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8695519,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8705035,
-      "signature_type": "jffs2"
     },
     {
       "offset": 8707724,
@@ -2785,104 +1707,36 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 8795507,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 8808791,
       "signature_type": "ext"
-    },
-    {
-      "offset": 8821435,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8831287,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8843103,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8857198,
-      "signature_type": "jffs2"
     },
     {
       "offset": 8861990,
       "signature_type": "gzip"
     },
     {
-      "offset": 8869613,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8880199,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 8884864,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 8892817,
       "signature_type": "ext"
-    },
-    {
-      "offset": 8919010,
-      "signature_type": "jffs2"
     },
     {
       "offset": 8922176,
       "signature_type": "gzip"
     },
     {
-      "offset": 8925632,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 9017646,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 9018886,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 9031322,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 9032338,
-      "signature_type": "jffs2"
     },
     {
       "offset": 9070479,
       "signature_type": "gzip"
     },
     {
-      "offset": 9077818,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 9083694,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 9087277,
       "signature_type": "gzip"
     },
     {
-      "offset": 9091698,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 9104727,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 9107379,
-      "signature_type": "jffs2"
     },
     {
       "offset": 9133081,
@@ -2901,24 +1755,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 9269358,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 9308330,
       "signature_type": "ext"
     },
     {
-      "offset": 9310221,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 9377357,
       "signature_type": "gzip"
-    },
-    {
-      "offset": 9412382,
-      "signature_type": "jffs2"
     },
     {
       "offset": 9437242,
@@ -2929,20 +1771,12 @@
       "signature_type": "gzip"
     },
     {
-      "offset": 9534702,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 9550205,
       "signature_type": "gzip"
     },
     {
       "offset": 9574348,
       "signature_type": "ext"
-    },
-    {
-      "offset": 9583919,
-      "signature_type": "jffs2"
     },
     {
       "offset": 9593357,
@@ -2965,28 +1799,12 @@
       "signature_type": "ext"
     },
     {
-      "offset": 9615316,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 9621370,
-      "signature_type": "jffs2"
-    },
-    {
-      "offset": 9628730,
-      "signature_type": "jffs2"
-    },
-    {
       "offset": 9659233,
       "signature_type": "xz"
     },
     {
       "offset": 9664347,
       "signature_type": "ext"
-    },
-    {
-      "offset": 9678416,
-      "signature_type": "jffs2"
     },
     {
       "offset": 9728488,
@@ -3000,15 +1818,7 @@
       "rootfs_score": 13.303304908059076,
       "was_merged": false,
       "file_node_count": 853,
-      "archive_hash": "1482eb032c181721af76bd5cc007c67f4de5914a"
-    },
-    {
-      "path": "routeros.binwalk.0.tar.gz",
-      "extractor": "binwalk",
-      "rootfs_score": 13.303304908059076,
-      "was_merged": false,
-      "file_node_count": 755,
-      "archive_hash": "4f6eb5dc7c01c53773906cc63d736237e2272f9a"
+      "archive_hash": "6fdd3ebd3f2c68095cb87fc425b293dd7ef77871"
     }
   ]
 }

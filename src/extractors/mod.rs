@@ -10,11 +10,12 @@ use thiserror::Error;
 mod binwalk;
 mod binwalk3;
 mod unblob;
+mod native;
 
-use {binwalk::BinwalkExtractor, binwalk3::Binwalk3Extractor, unblob::UnblobExtractor};
+use {binwalk::BinwalkExtractor, binwalk3::Binwalk3Extractor, unblob::UnblobExtractor, native::NativeExtractor};
 
 pub static ALL_EXTRACTORS: &[&dyn Extractor] =
-    &[&BinwalkExtractor, &Binwalk3Extractor, &UnblobExtractor];
+    &[&BinwalkExtractor, &Binwalk3Extractor, &UnblobExtractor, &NativeExtractor];
 
 static TIMEOUT_SECS: AtomicU64 = AtomicU64::new(u64::MAX);
 

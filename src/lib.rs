@@ -70,7 +70,13 @@ pub fn main(args: args::Args) -> Result<(BestExtractor, PathBuf), Fw2tarError> {
 
     let extractors: Vec<_> = args
         .extractors
-        .map(|extractors| extractors.split(",").map(String::from).collect())
+        .map(|extractors| {
+            extractors
+                .split(",")
+                .map(String::from)
+                .filter(|e| e.to_lowercase() != "none")
+                .collect()
+        })
         .unwrap_or_else(|| {
             extractors::all_extractor_names()
                 .map(String::from)
